@@ -150,7 +150,7 @@
             </p>
         <h2>Setup for Unsupervised Learning</h2>   
         <h3>PCA</h3> 
-        <p>The main purpose of dimension reduction in our project is creating new features for volatility prediction, so we choose PCA here.
+        <p>The main purpose of dimension reduction in this project is creating new features for volatility prediction, so we choose PCA here.
         </p>
         <h4>Fourier transform:</h4>
         <p>After data processing, we have the full book data frame with 10 features from book data and actual trade data and 2 features we calculated earlier(stock log returns, weighted averaged price)</p>
@@ -164,7 +164,7 @@
         <p class="content-placeholder">
             <img src="images/Normalized.png" alt="fullBook">
         </p>
-        <p>Our data is ready for PCA now, and we can check the size of our normalized training set and it’s the first 80% of the fourier series.
+        <p>The data is ready for PCA now, and we can check the size of the normalized training set and it’s the first 80% of the fourier series.
         </p>
         <h4>PCA components extraction:</h4>
         <p>To obtain the useful components, we used the PCA function in sklearn and set the number of components as 10 (10 was selected by elbow method). If this runs out of memory, we can switch to incremental PCA.</p>
@@ -248,7 +248,7 @@
         </p>
 
         <h3>Ridge Regression</h3>
-        <p>Another model that we are using to test our data to compare with other models are ridge regression. First, using Grid Search CV to find the best Alpha, we were using each of our features as our training data, test it on target testing data and compute for R2 and RMSE. The following is the table with every features and their corresponding ststiscal analysis (sorting based on R2 value):
+        <p>Another model that we are using to test the data to compare with other models is ridge regression. First, using Grid Search CV to find the best Alpha, we were using each of the features in the training data, test it on target testing data and compute for R2 and RMSE. The following is the table with every features and their corresponding ststiscal analysis (sorting based on R2 value):
         </p>
 
         <p class="content-placeholder">
@@ -272,10 +272,10 @@
         </p>
 
         <h2>Conclusion </h2>
-         <p>In summary, our study has highlighted the effectiveness of both supervised and unsupervised methods in volatility forecasting, leading to several significant insights. After evaluating various unsupervised machine learning models, we determined that the Random Forest approach exhibited the best fit, with an impressive R-squared value of over 70 percent with RMSE at 0.0013. The Ridge Regression approach closely followed, achieving an R-squared value of nearly 70 percent with RMSE at 0.001545 (converted from MSE of 0.000002389). In contrast to these two models, our use of Convolutional Neural Networks has shown less than 1 percent for its R-squared value with RMSE at 0.00253, demonstrating its poor outcome; we suspect that this could be due to the poor quality of the data. Second, among the supervised machine learning models, by leveraging a combination of Fourier and PCA methods, we were able to detect shift-invariant patterns while achieving dimensionality reduction. In the same models, we also found out that by using Gaussian Mixture Model to the PCA approach, the number of optimal components we have seen stands at 3. Third, by comparing with the baseline Time-Series model, particularly the GARCH approach, we have demonstrated the more reliability of the machine learning approaches. Within the GARCH approach, we have shown that there is not much difference in time variance series. Lastly, by being able to utilise a mixture of unsupervised and supervised models, we hope that our study can contribute to the existing studies on predicting stock volatility using machine learning models.
+         <p>This study has highlighted the effectiveness of both supervised and unsupervised methods in volatility forecasting, leading to several significant insights. After evaluating various unsupervised machine learning models, we determined that the Random Forest approach exhibited the best fit, with an impressive R-squared value of over 70 percent with RMSE at 0.0013. The Ridge Regression approach closely followed, achieving an R-squared value of nearly 70 percent with RMSE at 0.001545 (converted from MSE of 0.000002389). In contrast to these two models, the use of Convolutional Neural Networks has shown less than 1 percent for its R-squared value with RMSE at 0.00253, demonstrating its poor outcome; we suspect that this could be due to the poor quality of the data. Second, among the supervised machine learning models, by leveraging a combination of Fourier and PCA methods, we were able to detect shift-invariant patterns while achieving dimensionality reduction. In the same models, we also found out that by using Gaussian Mixture Model to the PCA approach, the number of optimal components we have seen stands at 3. Third, by comparing with the baseline Time-Series model, particularly the GARCH approach, we have demonstrated the more reliability of the machine learning approaches. Within the GARCH approach, we have shown that there is not much difference in time variance series. Lastly, by being able to utilise a mixture of unsupervised and supervised models, we hope that this study can contribute to the existing studies on predicting stock volatility using machine learning models.
 
         </p>   
-        <p>Moving forward, future studies could focus on addressing the limitations identified in our research. Firstly, studies could be conducted to understand why the Convolutional Neural Networks approach yielded a low R-squared value, possibly due to data quality issues. We hope that with a better dataset for CNN, more accurate results might be achieved. Secondly, within the unsupervised models, we hope that by conducting comparative studies with other dimensionality reduction techniques, the outcomes could provide valuable insights into selecting the most effective approach. Thirdly, expanding the comparison with various baseline time-series models could strengthen the argument for the reliability and superiority of machine learning approaches in volatility forecasting. Last, but not least, by using the same Optiver dataset, further studies could examine using other appropriate unsupervised and supervised methods. 
+        <p>Moving forward, future studies could focus on addressing the limitations identified from these results. Firstly, studies could be conducted to understand why the Convolutional Neural Networks approach yielded a low R-squared value, possibly due to data quality issues. We hope that with a better dataset for CNN, more accurate results might be achieved. Secondly, within the unsupervised models, we hope that by conducting comparative studies with other dimensionality reduction techniques, the outcomes could provide valuable insights into selecting the most effective approach. Thirdly, expanding the comparison with various baseline time-series models could strengthen the argument for the reliability and superiority of machine learning approaches in volatility forecasting. Last, but not least, by using the same Optiver dataset, further studies could examine using other appropriate unsupervised and supervised methods. 
 
         </p>
         
